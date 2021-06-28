@@ -1,12 +1,17 @@
-function microondas_menu(alimento, tempo){
-    let pipoca = 10;
-    let macarrao = 8;
-    let carne = 15;
-    let feijao = 12;
-    let brigadeiro = 8;
+// definido o objeto microondas_menu com as opções de preparo
+let microondas_menu = { 
+    pipoca: 10,
+    macarrao:  8,
+    carne:  15,
+    feijao: 12,
+    brigadeiro: 8
 
-}
+};
     
+let{pipoca, macarrao, carne, feijao, brigadeiro} = microondas_menu;
+
+
+// criada a função para validar o tempo e exibir mensagem para o usuário
 function validarTempo(tempo, tempoPadrao){
     if(tempo >= tempoPadrao * 3){
         console.log('Kabumm!')
@@ -20,21 +25,21 @@ function validarTempo(tempo, tempoPadrao){
 }
 
 
-function microondas_menu(comida, tempo){
-    switch (key) {
-        case pipoca:
+function microondas_user(comida, tempo){
+    switch (comida) {
+        case 'pipoca':
             validarTempo(tempo, pipoca);  
             break;
-        case macarrao:
+        case 'macarrao':
             validarTempo(tempo, macarrao);
             break;
-        case carne:
+        case 'carne':
             validarTempo(tempo, carne)
             break;
-        case feijao:
+        case 'feijao':
             validarTempo(tempo, feijao)
             break;
-        case brigadeiro:
+        case 'brigadeiro':
             validarTempo(tempo, brigadeiro)
             break;
     
@@ -43,3 +48,5 @@ function microondas_menu(comida, tempo){
             break;
     }
 }
+
+microondas_user('feijao', 2); 
